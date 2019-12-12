@@ -21,8 +21,7 @@ def movies():
                     }
                     """
     parsed_json = json.loads(json_string)
-    print(parsed_json['name'] + " is a " + parsed_json['job'])
-    return render_template('movie.html', movie={})
+    return render_template('movie.html', movie=parsed_json)
 
 
 @app.route('/tvshows')
