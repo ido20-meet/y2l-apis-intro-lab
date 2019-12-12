@@ -20,6 +20,8 @@ def movies():
                     "image_url": "https://ksassets.timeincuk.net/wp/uploads/sites/55/2018/02/KXC1W2-920x584.jpg"
                     }
                     """
+    parsed_json = json.loads(json_string)
+    print(parsed_json['name'] + " is a " + parsed_json['job'])
     return render_template('movie.html', movie={})
 
 
